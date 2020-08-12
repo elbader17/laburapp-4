@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "presupuesto_detalles",
+  "info": {
+    "name": "PresupuestoDetalle"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "pedido_servicio": {
+      "model": "pedido-servicio",
+      "via": "presupuesto_detalles"
+    },
+    "presupuesto": {
+      "model": "presupuesto",
+      "via": "presupuesto_detalles"
+    },
+    "tarea_presupuesto_detalles": {
+      "via": "presupuesto_detalle",
+      "collection": "tarea-presupuesto-detalle"
+    },
+    "material_presupuesto_detalles": {
+      "collection": "material-presupuesto-detalle",
+      "via": "presupuesto_detalle"
+    }
+  }
+}

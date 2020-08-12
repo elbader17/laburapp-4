@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "provincias",
+  "info": {
+    "name": "provincia"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "ProvinciaNombre": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "localidades": {
+      "collection": "localidad",
+      "via": "provincia"
+    }
+  }
+}

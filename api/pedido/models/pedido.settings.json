@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pedidos",
+  "info": {
+    "name": "Pedido"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "PedidoFecha": {
+      "type": "date",
+      "required": true
+    },
+    "PedidoDescripcion": {
+      "type": "text"
+    },
+    "persona": {
+      "via": "pedidos",
+      "model": "usuario"
+    },
+    "estado": {
+      "model": "estado",
+      "via": "pedidos"
+    },
+    "pedido_servicios": {
+      "via": "pedido",
+      "collection": "pedido-servicio"
+    }
+  }
+}

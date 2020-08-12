@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usuario_laburapps",
+  "info": {
+    "name": "usuario_laburapp"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "UsuarioNombre": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "nousar": {
+      "type": "password"
+    },
+    "tipo_usuario": {
+      "model": "tipo-usuario",
+      "via": "usuario_laburapps"
+    },
+    "persona": {
+      "model": "usuario",
+      "via": "usuario_laburapp"
+    },
+    "contrasena": {
+      "type": "string"
+    }
+  }
+}

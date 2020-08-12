@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tareas",
+  "info": {
+    "name": "Tarea"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "TareaDescripcion": {
+      "type": "text"
+    },
+    "tarea_presupuesto_detalles": {
+      "via": "tarea",
+      "collection": "tarea-presupuesto-detalle"
+    }
+  }
+}

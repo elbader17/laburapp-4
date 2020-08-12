@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tarea_presupuesto_detalles",
+  "info": {
+    "name": "TareaPresupuestoDetalle"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "TareaPresupuestoDetallePrecio": {
+      "type": "decimal"
+    },
+    "TareaPresupuestoDetalleCantidad": {
+      "type": "integer",
+      "required": true
+    },
+    "tarea": {
+      "model": "tarea",
+      "via": "tarea_presupuesto_detalles"
+    },
+    "presupuesto_detalle": {
+      "model": "presupuesto-detalle",
+      "via": "tarea_presupuesto_detalles"
+    }
+  }
+}

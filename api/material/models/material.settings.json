@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "materials",
+  "info": {
+    "name": "Material"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "MaterialDescripcion": {
+      "type": "text"
+    },
+    "material_presupuesto_detalles": {
+      "via": "material",
+      "collection": "material-presupuesto-detalle"
+    }
+  }
+}

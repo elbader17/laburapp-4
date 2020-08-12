@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pedido_servicios",
+  "info": {
+    "name": "PedidoServicio"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "PedidoServicioDescripcion": {
+      "type": "text"
+    },
+    "servicio": {
+      "via": "pedido_servicios",
+      "model": "servicio"
+    },
+    "pedido": {
+      "model": "pedido",
+      "via": "pedido_servicios"
+    },
+    "presupuesto_detalles": {
+      "via": "pedido_servicio",
+      "collection": "presupuesto-detalle"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prestador_servicios",
+  "info": {
+    "name": "PrestadorServicios"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "prestador": {
+      "model": "prestador",
+      "via": "prestador_servicios"
+    },
+    "servicio": {
+      "via": "prestador_servicios",
+      "model": "servicio"
+    }
+  }
+}
